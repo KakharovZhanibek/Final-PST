@@ -41,5 +41,13 @@ namespace P_S_T.Modul
             string str = string.Format("ФИО :{0}\nВозраст :{1}\nДата рождения :{2}", FIO, Age, DOB.Date);
             return str;
         }
+        public static bool operator ==(Teacher t1, Teacher t2)
+        {
+            return (t1.FIO == t2.FIO && t1.DOB == t2.DOB && t1.Age == t2.Age);
+        }
+        public static bool operator !=(Teacher t1, Teacher t2)
+        {
+            return (t1.FIO != t2.FIO && t1.DOB != t2.DOB && t1.Age != t2.Age);
+        }
     }
 }

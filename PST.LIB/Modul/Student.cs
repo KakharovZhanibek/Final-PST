@@ -44,5 +44,13 @@ namespace P_S_T.Modul
             temp_students.RemoveAt(r);
             return s;
         }
+        public static bool operator==(Student s1,Student s2)
+        {
+            return (s1.FIO == s2.FIO && s1.DOB == s2.DOB && s1.Age == s2.Age);
+        }
+        public static bool operator !=(Student s1, Student s2)
+        {
+            return (s1.FIO != s2.FIO && s1.DOB != s2.DOB && s1.Age != s2.Age);
+        }
     }
 }
